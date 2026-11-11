@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Онлайн-запись в детское спа — AURA kids</title>
+  <meta name="description" content="Запишите ребёнка в AURA kids: выберите программу, дату и удобное время. Подтверждение брони придёт в кабинет родителя.">
+  
+  <meta name="theme-color" content="#fff6fb">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('aura-theme');
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        if (theme === 'dark') {
+          document.documentElement.dataset.theme = 'dark';
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', '#140e1b');
+        }
+        var lang = localStorage.getItem('aura-lang');
+        if (lang === 'kk' || lang === 'en' || lang === 'ru') document.documentElement.lang = lang;
+      } catch (error) { /* storage can be unavailable in private mode */ }
+    })();
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Запись в AURA kids.">
+  <meta property="og:description" content="Выберите программу, дату и время — подтверждение в кабинете родителя.">
+  <meta property="og:image" content="/assets/k-hero.jpg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="blob-c"></span>
+    <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span><span class="bubble b4"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header" id="site-header"></header>
+  <main id="view">
+    <div class="boot-screen" aria-label="Загрузка">
+      <span class="brand-mark boot-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12ZM5.5 13a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM16.5 15.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg></span>
+      <p>AURA kids</p>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <noscript><p style="padding:120px 24px;text-align:center">Для онлайн-записи в AURA kids включите JavaScript в браузере или позвоните нам: +7 727 123-45-67.</p></noscript>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
